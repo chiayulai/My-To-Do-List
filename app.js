@@ -475,6 +475,8 @@ async function handleGoogleLogin() {
     } else if (error.code === "auth/operation-not-allowed") {
       alert("⚠️ Google 登入尚未在 Firebase Console 啟用！\n\n請前往 Firebase 控制台：\nAuthentication -> Sign-in method -> 點選「Google」切換為「啟用」後按儲存。");
       openModal(el.modalFirebaseConfig);
+    } else if (error.code === "auth/unauthorized-domain") {
+      alert(`⚠️ 網域未獲授權！\n\n您當前的網址網域為：${window.location.hostname}\n\n請前往 Firebase 控制台將其加入「已授權的網域」：\n1. 開啟 Firebase Console -> Authentication\n2. 點選「設定 (Settings)」分頁 ->「已授權的網域 (Authorized domains)」\n3. 點選「新增網域」，填入「${window.location.hostname}」並儲存即可！`);
     } else {
       showToast(`登入失敗: ${error.message}`, "error");
     }
