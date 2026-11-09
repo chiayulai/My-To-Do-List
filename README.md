@@ -1,5 +1,7 @@
 # My To-Do List - 多人即時協作待辦清單應用程式
 
+> 🌐 **線上體驗網址 (GitHub Pages)**: [https://chiayulai.github.io/My-To-Do-List/](https://chiayulai.github.io/My-To-Do-List/)
+
 這是一個針對 Firebase 專案 **`my-to-do-list-c081d`** 打造的現代化多人即時協作待辦清單（To-Do List）網頁應用程式。
 
 支援 **Google 帳號一鍵登入**、**多清單管理**、**專屬邀請代碼與分享連結加入**、**任務指派**、**優先級/截止日篩選** 以及 **Cloud Firestore 即時同步協作**。
